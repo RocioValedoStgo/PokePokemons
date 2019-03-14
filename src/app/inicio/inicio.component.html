@@ -1,0 +1,22 @@
+<button routerLink='formulario' class="btn btn-primary">Crear</button>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let item of pokemons" class="card col-md-3 col-sm-6">
+      <img src="{{item.image}}" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">
+          CP: <strong>{{item.cp}}</strong> 
+          <br>
+          Tipo: <strong>{{item.type}}</strong>
+          <br>
+          Generacion: <strong>{{item.generation}}</strong>
+        </p>
+        <button routerLink='editar' class="btn btn-dark">Editar</button>
+        &nbsp;
+        <button class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
